@@ -3,7 +3,9 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <h1>GLASSBYTE</h1>
+  <div id="intro-title-container">
+    <h1 id="intro-title">GLASSBYTE</h1>
+  </div>
   <div class="top-curtain"></div>
   <div class="bottom-curtain"></div>
 </body>
