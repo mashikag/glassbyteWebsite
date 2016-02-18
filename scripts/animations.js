@@ -36,4 +36,12 @@ function initIntro(){
   });
 }
 
-window.addEventListener("load", initIntro);
+if (window.addEventListener) {
+	window.addEventListener("load", initIntro);
+}
+else if (window.attachEvent) {
+		window.attachEvent("onload", initIntro);
+}
+else {
+	window.onload = initIntro();
+}

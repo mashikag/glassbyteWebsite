@@ -93,9 +93,10 @@ body{
   0% {top:0; clip: rect(0, 100vw, 50vh, 0);}
   100% {top:-50vh; clip: rect(0, 100vw, 0, 0);}
 }
+/*curtain-rolling-down Modifies the height as well so that the scroll bar does not appear because of moving the curtain down, i.e. curtain gets smaller instead.*/
 @-webkit-keyframes curtain-rolling-down{
-  0% {top:0; clip: rect(50vh, 100vw, 100vh, 0);}
-  100% {top:50vh; clip: rect(100vh, 100vw, 100vh, 0);}
+  0% {top:0; clip: rect(50vh, 100vw, 100vh, 0); height: 100%;}
+  100% {top:50vh; clip: rect(100vh, 100vw, 100vh, 0); height: 50%;}
 }
 @keyframes curtain-rolling-down{
   0% {top:0; clip: rect(50vh, 100vw, 100vh, 0); height: 100%;}
