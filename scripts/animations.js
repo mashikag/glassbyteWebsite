@@ -1,7 +1,7 @@
 function isAnimationEnded(element){
     var anim;
     var animations = {
-      'animation':'transitionend',
+      'animation':'animationend',
       'OAnimation':'oAnimationEnd',
       'MozAnimation':'animationend',
       'WebkitAnimation':'webkitAnimationEnd'
@@ -9,7 +9,7 @@ function isAnimationEnded(element){
 
     for(anim in animations){
         if( element.style[anim] !== undefined ){
-            return anim[t];
+            return animations[anim];
         }
     }
 }
@@ -22,14 +22,18 @@ function initIntro(){
   /* Listen for a transition! */
   var curtainUpEvent = isAnimationEnded(topCurtainEl);
   var curtainDownEvent = isAnimationEnded(bottomCurtainEl);
+  
+  var introWrapper = document.getElementById('intro-wrapper');
 
   /*Set up listeners*/
-  curtainUpEvent && e.addEventListener(curtainUpEvent, function() {
+  curtainUpEvent && window.addEventListener(curtainUpEvent, function() {
     console.log('Curtain up complete!  This is the callback, no library needed!');
+	introWrapper.style.visibility = 'hidden';
   });
-  curtainDownEvent && e.addEventListener(curtainDownEvent, function() {
+  curtainDownEvent && window.addEventListener(curtainDownEvent, function() {
     console.log('Curtain down!');
+	introWrapper.style.visibility = 'hidden';
   });
 }
 
-$(window).ready(initIntro());
+window.addEventListener("load", initIntro);

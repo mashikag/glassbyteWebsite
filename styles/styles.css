@@ -1,3 +1,13 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+#intro-wrapper{
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+}
 .intro-title{
   display:inline-block;
   position:absolute;
@@ -88,6 +98,6 @@
   100% {top:50vh; clip: rect(100vh, 100vw, 100vh, 0);}
 }
 @keyframes curtain-rolling-down{
-  0% {top:0; clip: rect(50vh, 100vw, 100vh, 0);}
-  100% {top:50vh; clip: rect(100vh, 100vw, 100vh, 0);}
+  0% {top:0; clip: rect(50vh, 100vw, 100vh, 0); height: 100%;}
+  100% {top:50vh; clip: rect(100vh, 100vw, 100vh, 0);height: 50%;}
 }
