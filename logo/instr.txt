@@ -1,0 +1,4 @@
+Gradiennt for glass: 
+- 45deg from top-front-facing corner
+- from 0x89bbe8 to 0x007ae8
+-opacity 65%?
