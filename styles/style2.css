@@ -18,13 +18,23 @@ body{
 /*MENU BOXES*/
 .menu-box{
 	position:absolute;
-	top: 50vh;
-	left: 50vw;
+	top: 50%;
+	left: 50%;
 }
 #menu-box1{
 	transform: translate(-50%, -50%);
 	z-index:5;
 }
+#menu-wrapper{
+	position:absolute;
+	top:50vh;
+	left:50vw;
+}
+#menu-wrapper:hover{}
+.animate-box1{}
+.animate-boxes-2-3{}
+.animate-boxes-4-5-6{}
+.aniamte-boxes-7-8{}
 #menu-box2{
 	transform: translate(-100%, -66.66%); 
 	z-index:4;
