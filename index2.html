@@ -2,18 +2,55 @@
 <head>
   <link rel="stylesheet" type="text/css" href="styles/style2.css">
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script>
+	var showMenu = false;
+	function restartMenuAnimation(ev){
+		if (showMenu && ev == "mouseleave" || !showMenu && ev == "mouseover") {
+			showMenu = !showMenu;
+			
+			var boxCount = 8;
+			var imgSrc = "logo/box-300px.png";
+			if (showMenu) {
+				for ( i = 1; i <= boxCount; i++) {
+					var newEl = document.createElement("img");
+					newEl.src = imgSrc;
+					newEl.className += ' menu-box';
+					newEl.className += ' menu-box' + i;
+					newEl.className += ' show-menu-box' + i;
+					var el = document.getElementsByClassName("menu-box menu-box"+i)[0];
+					console.log(newEl + "\n" + el);
+					el.parentNode.replaceChild(newEl, el);
+				}
+			} else {
+				for ( i = 1; i <= boxCount; i++) {
+					var newEl = document.createElement("img");
+					newEl.src = imgSrc;
+					newEl.className += ' menu-box';
+					newEl.className += ' menu-box' + i;
+					newEl.className += ' hide-menu-box' + i;
+					var el = document.getElementsByClassName("menu-box menu-box"+i)[0];
+			console.log(newEl + "\n" + el);
+					el.parentNode.replaceChild(newEl, el);
+					
+				}
+			}
+			
+			console.log("restartMenuAnimation");
+		}
+	}
+  </script>
 </head>
 <body>
 	<div id="intro-region" class="main-region">
-		<div id="menu-wrapper" ng-init="showMenu = false" ng-mouseover="showMenu = true" ng-mouseleave="showMenu = false">
-			<img src="logo/box-300px.png" class="menu-box menu-box1" ng-class="{'show-menu-box1':showMenu, 'hide-menu-box1':!showMenu}">
-			<img src="logo/box-300px.png" class="menu-box menu-box2" ng-class="{'show-menu-box2':showMenu, 'hide-menu-box2':!showMenu}">
-			<img src="logo/box-300px.png" class="menu-box menu-box3" ng-class="{'show-menu-box3':showMenu, 'hide-menu-box3':!showMenu}">
-			<img src="logo/box-300px.png" class="menu-box menu-box4" ng-class="{'show-menu-box4':showMenu, 'hide-menu-box4':!showMenu}">
-			<img src="logo/box-300px.png" class="menu-box menu-box5" ng-class="{'show-menu-box5':showMenu, 'hide-menu-box5':!showMenu}">
-			<img src="logo/box-300px.png" class="menu-box menu-box6" ng-class="{'show-menu-box6':showMenu, 'hide-menu-box6':!showMenu}">
-			<img src="logo/box-300px.png" class="menu-box menu-box7" ng-class="{'show-menu-box7':showMenu, 'hide-menu-box7':!showMenu}">
-			<img src="logo/box-300px.png" class="menu-box menu-box8" ng-class="{'show-menu-box8':showMenu, 'hide-menu-box8':!showMenu}">
+		<div id="menu-wrapper" onmouseover="restartMenuAnimation('mouseover')" onmouseleave="restartMenuAnimation('mouseleave')">
+			<img src="logo/box-300px.png" class="menu-box menu-box1">
+			<img src="logo/box-300px.png" class="menu-box menu-box2">
+			<img src="logo/box-300px.png" class="menu-box menu-box3">
+			<img src="logo/box-300px.png" class="menu-box menu-box4">
+			<img src="logo/box-300px.png" class="menu-box menu-box5">
+			<img src="logo/box-300px.png" class="menu-box menu-box6">
+			<img src="logo/box-300px.png" class="menu-box menu-box7">
+			<img src="logo/box-300px.png" class="menu-box menu-box8">
 		</div>
 	</div>
 </body>

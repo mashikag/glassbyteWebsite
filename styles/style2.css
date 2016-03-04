@@ -32,14 +32,14 @@ body{
 	top: 66%;
 	left: 50%;
 }
-.menu-box1{z-index:5;}
-.menu-box2{z-index:4;}
-.menu-box3{z-index:4;}
-.menu-box4{z-index:3;}
-.menu-box5{z-index:3;}
-.menu-box6{z-index:3;}
-.menu-box7{z-index:3;}
-.menu-box8{z-index:4;}
+.menu-box1{transform: translate(-50%, -50%); z-index:5;}
+.menu-box2{transform: translate(-100%, -66.66%); z-index:4;}
+.menu-box3{transform: translate(0, -66.66%); z-index:4;}
+.menu-box4{transform: translate(-50%, -83.4%); z-index:3;}
+.menu-box5{transform: translate(-150%, -83.4%); z-index:3;}
+.menu-box6{transform: translate(50%, -83.4%); z-index:3;}
+.menu-box7{transform: translate(-200%, -66.66%); z-index:3;}
+.menu-box8{transform: translate(100%, -66.6%); z-index:4;}
 .show-menu-box1{
 	transform: translate(-50%, -50%);
 }
@@ -104,7 +104,7 @@ body{
     animation-direction: reverse;
 }
 .hide-menu-box4{
-	transform: translate(-50%, -83.4%);
+	transform: translate(-50%, -83.4%); 
     -webkit-animation-name: anim-show-menu-box4; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
     animation-name: anim-show-menu-box4;
@@ -112,7 +112,7 @@ body{
     animation-direction: reverse;
 }
 .hide-menu-box5{
-	transform: translate(-150%, -83.4%);
+	transform: translate(-150%, -83.4%); 
     -webkit-animation-name: anim-show-menu-box5; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
     animation-name: anim-show-menu-box5;
@@ -120,7 +120,7 @@ body{
     animation-direction: reverse;
 }
 .hide-menu-box6{
-	transform: translate(50%, -83.4%);
+	transform: translate(50%, -83.4%); 
     -webkit-animation-name: anim-show-menu-box6; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
     animation-name: anim-show-menu-box6;
@@ -128,7 +128,7 @@ body{
     animation-direction: reverse;
 }
 .hide-menu-box7{
-	transform: translate(-200%, -66.66%);
+	transform: translate(-200%, -66.66%); 
 }
 .hide-menu-box8{
 	transform: translate(100%, -66.6%); 
