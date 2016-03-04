@@ -1,18 +1,19 @@
-<html>
+<html ng-app>
 <head>
   <link rel="stylesheet" type="text/css" href="styles/style2.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 <body>
 	<div id="intro-region" class="main-region">
-		<div id="menu-wrapper">
-			<img src="logo/box-300px.png" id="menu-box1" class="menu-box">
-			<img src="logo/box-300px.png" id="menu-box2" class="menu-box">
-			<img src="logo/box-300px.png" id="menu-box3" class="menu-box">
-			<img src="logo/box-300px.png" id="menu-box4" class="menu-box">
-			<img src="logo/box-300px.png" id="menu-box5" class="menu-box">
-			<img src="logo/box-300px.png" id="menu-box6" class="menu-box">
-			<img src="logo/box-300px.png" id="menu-box7" class="menu-box">
-			<img src="logo/box-300px.png" id="menu-box8" class="menu-box">
+		<div id="menu-wrapper" ng-init="showMenu = false" ng-mouseover="showMenu = true" ng-mouseleave="showMenu = false">
+			<img src="logo/box-300px.png" class="menu-box menu-box1" ng-class="{'show-menu-box1':showMenu, 'hide-menu-box1':!showMenu}">
+			<img src="logo/box-300px.png" class="menu-box menu-box2" ng-class="{'show-menu-box2':showMenu, 'hide-menu-box2':!showMenu}">
+			<img src="logo/box-300px.png" class="menu-box menu-box3" ng-class="{'show-menu-box3':showMenu, 'hide-menu-box3':!showMenu}">
+			<img src="logo/box-300px.png" class="menu-box menu-box4" ng-class="{'show-menu-box4':showMenu, 'hide-menu-box4':!showMenu}">
+			<img src="logo/box-300px.png" class="menu-box menu-box5" ng-class="{'show-menu-box5':showMenu, 'hide-menu-box5':!showMenu}">
+			<img src="logo/box-300px.png" class="menu-box menu-box6" ng-class="{'show-menu-box6':showMenu, 'hide-menu-box6':!showMenu}">
+			<img src="logo/box-300px.png" class="menu-box menu-box7" ng-class="{'show-menu-box7':showMenu, 'hide-menu-box7':!showMenu}">
+			<img src="logo/box-300px.png" class="menu-box menu-box8" ng-class="{'show-menu-box8':showMenu, 'hide-menu-box8':!showMenu}">
 		</div>
 	</div>
 </body>

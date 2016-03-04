@@ -32,51 +32,139 @@ body{
 	top: 66%;
 	left: 50%;
 }
-.show-menu-box1{}
-.show-menu-box2{}
-.show-menu-box3{}
-.show-menu-box4{}
-.show-menu-box5{}
-.show-menu-box6{}
-.show-menu-box7{}
-.show-menu-box8{}
-#menu-box1{
+.menu-box1{z-index:5;}
+.menu-box2{z-index:4;}
+.menu-box3{z-index:4;}
+.menu-box4{z-index:3;}
+.menu-box5{z-index:3;}
+.menu-box6{z-index:3;}
+.menu-box7{z-index:3;}
+.menu-box8{z-index:4;}
+.show-menu-box1{
 	transform: translate(-50%, -50%);
-	z-index:5;
 }
-#menu-box2{
-	transform: translate(-100%, -66.66%); 
-	z-index:4;
+.show-menu-box2{
+	transform: translate(-100%, 0%);
+    -webkit-animation-name: anim-show-menu-box2; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: anim-show-menu-box2;
+    animation-duration: 2s;
 }
-#menu-box3{
-	transform: translate(0, -66.66%); 
-	z-index:4;
+.show-menu-box3{
+	transform: translate(0, 0%); 
+    -webkit-animation-name: anim-show-menu-box3; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: anim-show-menu-box3;
+    animation-duration: 2s;
 }
-#menu-box4{
-	transform: translate(-50%, -83.4%); 
-	z-index:3;
+.show-menu-box4{
+	transform: translate(-50%, -150%);
+    -webkit-animation-name: anim-show-menu-box4; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: anim-show-menu-box4;
+    animation-duration: 2s;
 }
-#menu-box5{
-	transform: translate(-150%, -83.4%); 
-	z-index:3;
+.show-menu-box5{
+	transform: translate(-150%, -117%);
+    -webkit-animation-name: anim-show-menu-box5; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: anim-show-menu-box5;
+    animation-duration: 2s;
 }
-#menu-box6{
-	transform: translate(50%, -83.4%); 
-	z-index:3;
+.show-menu-box6{
+	transform: translate(50%, -117%);
+    -webkit-animation-name: anim-show-menu-box6; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: anim-show-menu-box6;
+    animation-duration: 2s;
 }
-#menu-box7{
-	transform: translate(-200%, -66.66%); 
-	z-index:3;
+.show-menu-box7{
+	transform: translate(-200%, -66.66%);
 }
-#menu-box8{
+.show-menu-box8{
 	transform: translate(100%, -66.6%); 
-	z-index:4;
 }
-@keyframes anim-show-menu-box-1{}
-@keyframes anim-show-menu-box-2-3{}
-@keyframes anim-show-menu-box-4-5-6{}
-@keyframes anim-show-menu-box-7-8{}
-@keyframes anim-hide-menu-box-1{}
-@keyframes anim-hide-menu-box-2-3{}
-@keyframes anim-hide-menu-box1-4-5-6{}
-@keyframes anim-hide-menu-box1-7-8{}
+.hide-menu-box1{
+	transform: translate(-50%, -50%);
+}
+.hide-menu-box2{
+	transform: translate(-100%, -66.66%); 
+    -webkit-animation-name: anim-show-menu-box2; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: anim-show-menu-box2;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+.hide-menu-box3{
+	transform: translate(0, -66.66%); 
+    -webkit-animation-name: anim-show-menu-box3; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: anim-show-menu-box3;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+.hide-menu-box4{
+	transform: translate(-50%, -83.4%);
+    -webkit-animation-name: anim-show-menu-box4; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: anim-show-menu-box4;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+.hide-menu-box5{
+	transform: translate(-150%, -83.4%);
+    -webkit-animation-name: anim-show-menu-box5; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: anim-show-menu-box5;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+.hide-menu-box6{
+	transform: translate(50%, -83.4%);
+    -webkit-animation-name: anim-show-menu-box6; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: anim-show-menu-box6;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+.hide-menu-box7{
+	transform: translate(-200%, -66.66%);
+}
+.hide-menu-box8{
+	transform: translate(100%, -66.6%); 
+}
+@keyframes anim-show-menu-box2{
+	0% {transform: translate(-100%, -66.66%);}
+	100% {transform: translate(-100%, 0);}
+}@-webkit-keyframes anim-show-menu-box2{
+	0% {transform: translate(-100%, -66.66%);}
+	100% {transform: translate(-100%, 0);}
+}
+@keyframes anim-show-menu-box3{
+	0% {transform: translate(0, -66.66%);}
+	100% {transform: translate(0, 0);}
+}@-webkit-keyframes anim-show-menu-box3{
+	0% {transform: translate(0, -66.66%);}
+	100% {transform: translate(0, 0);}
+}
+@keyframes anim-show-menu-box4{
+	0% {transform: translate(-50%, -83.4%);}
+	100% {transform: translate(-50%, -150%);}
+}@-webkit-keyframes anim-show-menu-box4{
+	0% {transform: translate(-50%, -83.4%);}
+	100% {transform: translate(-50%, -150%);}
+}
+@keyframes anim-show-menu-box5{
+	0% {transform: translate(-150%, -83.4%);}
+	100% {transform: translate(-150%, -117%);}
+}@-webkit-keyframes anim-show-menu-box5{
+	0% {transform: translate(-150%, -83.4%);}
+	100% {transform: translate(-150%, -117%);}
+}
+@keyframes anim-show-menu-box6{
+	0% {transform: translate(50%, -83.4%);}
+	100% {transform: translate(50%, -117%);}
+}@-webkit-keyframes anim-show-menu-box6{
+	0% {transform: translate(50%, -83.4%);}
+	100% {transform: translate(50%, -117%);}
+}
