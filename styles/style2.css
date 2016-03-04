@@ -16,25 +16,34 @@ body{
 }
 
 /*MENU BOXES*/
+#menu-wrapper{
+	position:absolute; 
+	top:50vh;
+	left:50vw;
+	width:calc(4*300px);
+	height:calc(1.5*300px);
+	transform: translate(-50%, -50%);
+}
+#menu-wrapper:hover{
+	
+}
 .menu-box{
 	position:absolute;
-	top: 50%;
+	top: 66%;
 	left: 50%;
 }
+.show-menu-box1{}
+.show-menu-box2{}
+.show-menu-box3{}
+.show-menu-box4{}
+.show-menu-box5{}
+.show-menu-box6{}
+.show-menu-box7{}
+.show-menu-box8{}
 #menu-box1{
 	transform: translate(-50%, -50%);
 	z-index:5;
 }
-#menu-wrapper{
-	position:absolute;
-	top:50vh;
-	left:50vw;
-}
-#menu-wrapper:hover{}
-.animate-box1{}
-.animate-boxes-2-3{}
-.animate-boxes-4-5-6{}
-.aniamte-boxes-7-8{}
 #menu-box2{
 	transform: translate(-100%, -66.66%); 
 	z-index:4;
@@ -63,3 +72,11 @@ body{
 	transform: translate(100%, -66.6%); 
 	z-index:4;
 }
+@keyframes anim-show-menu-box-1{}
+@keyframes anim-show-menu-box-2-3{}
+@keyframes anim-show-menu-box-4-5-6{}
+@keyframes anim-show-menu-box-7-8{}
+@keyframes anim-hide-menu-box-1{}
+@keyframes anim-hide-menu-box-2-3{}
+@keyframes anim-hide-menu-box1-4-5-6{}
+@keyframes anim-hide-menu-box1-7-8{}
