@@ -42,21 +42,35 @@
 </head>
 <body>
 	<div id="intro-region" class="main-region">
-		<menu id="menu-wrapper" onmouseover="restartMenuAnimation('mouseover')" onmouseleave="restartMenuAnimation('mouseleave')">
+		<div id="menu-wrapper" onmouseover="restartMenuAnimation('mouseover')" onmouseleave="restartMenuAnimation('mouseleave')">
 			<img src="logo/box-300px.png" class="menu-box menu-box1">
 			<img src="logo/box-300px.png" class="menu-box menu-box2">
 			<img src="logo/box-300px.png" class="menu-box menu-box3">
-			<menuitem label="Products" onClick="#products">
 			<img src="logo/box-300px.png" class="menu-box menu-box4">
-			</menuitem>
-			<menuitem label="About" onClick="#about">
 			<img src="logo/box-300px.png" class="menu-box menu-box5">
-			</menuitem>
-			<menuitem label="Contact" onClick="#contact">
 			<img src="logo/box-300px.png" class="menu-box menu-box6">
-			</menuitem>
 			<img src="logo/box-300px.png" class="menu-box menu-box7">
 			<img src="logo/box-300px.png" class="menu-box menu-box8">
+      <menu>
+        <menuitem id="menu-item-middle-left" label="Products" onClick="#products">
+          Products
+        </menuitem>
+        <menuitem id="menu-item-middle-right" label="Products" onClick="#products">
+          Products
+        </menuitem>
+        <menuitem id="menu-item-east-left" label="About" onClick="#about">
+          About
+        </menuitem>
+        <menuitem id="menu-item-east-right" label="About" onClick="#about">
+          About
+        </menuitem>
+        <menuitem id="menu-item-west-left" label="Contact" onClick="#contact">
+          Contact
+        </menuitem>
+        <menuitem id="menu-item-west-left" label="Contact" onClick="#contact">
+          Contact
+        </menuitem>
+      </menu>
 		</div>
 	</div>
 </body>
