@@ -15,6 +15,8 @@ body{
   background: -moz-linear-gradient(rgb(20,160,205), rgb(15,100,165)); /* For Firefox 3.6 to 15 */
 }
 
+/*********************MENU*********************/
+
 /*MENU BOXES*/
 #menu-wrapper{
 	position:absolute; 
@@ -171,6 +173,8 @@ body{
 	0% {transform: translate(50%, -83.4%);}
 	100% {transform: translate(50%, -117%);}
 }
+
+/*MENU LABELS*/
 .menu-item{
   position: absolute;
   transform-origin: 50% 50%;
@@ -180,7 +184,7 @@ body{
 .hide-menu-item-middle-right{
   top: 43.75%;
   left: 56.25%;
-  transform: rotate(-17deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-17deg) skewX(-17deg);
   -webkit-animation-name: anim-show-menu-item-middle-right; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
@@ -191,7 +195,7 @@ body{
 .hide-menu-item-middle-left{
   top: 43.75%;
   left: 43.75%;
-  transform: rotate(17deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(17deg) skewX(17deg);
   -webkit-animation-name: anim-show-menu-item-middle-left; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
@@ -202,7 +206,7 @@ body{
 .hide-menu-item-east-right{
   top: 43.75%;
   left: 81.25%;
-  transform: rotate(-17deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-17deg) skewX(-17deg);
   -webkit-animation-name: anim-show-menu-item-east-right; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
@@ -213,7 +217,7 @@ body{
 .hide-menu-item-east-left{
   top: 43.75%;
   left: 68.75%;
-  transform: rotate(17deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(17deg) skewX(17deg);
   -webkit-animation-name: anim-show-menu-item-east-left; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
@@ -224,7 +228,7 @@ body{
 .hide-menu-item-west-right{
   top: 43.75%;
   left: 31.25%;
-  transform: rotate(-17deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-17deg) skewX(-17deg);
   -webkit-animation-name: anim-show-menu-item-west-right; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
@@ -235,7 +239,7 @@ body{
 .hide-menu-item-west-left{
   top: 43.75%;
   left: 18.75%;
-  transform: rotate(17deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(17deg) skewX(17deg);
   -webkit-animation-name: anim-show-menu-item-west-left; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
@@ -246,7 +250,7 @@ body{
 .show-menu-item-middle-right{
   top: -6.25%;
   left: 56.25%;
-  transform: rotate(-17deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-17deg) skewX(-17deg);
   -webkit-animation-name: anim-show-menu-item-middle-right; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   animation-name: anim-show-menu-item-middle-right;
@@ -255,7 +259,7 @@ body{
 .show-menu-item-middle-left{
   top: -6.25%;
   left: 43.75%;
-  transform: rotate(17deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(17deg) skewX(17deg);
   -webkit-animation-name: anim-show-menu-item-middle-left; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   animation-name: anim-show-menu-item-middle-left;
@@ -264,7 +268,7 @@ body{
 .show-menu-item-east-right{
   top: 18.75%;
   left: 81.25%;
-  transform: rotate(-17deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-17deg) skewX(-17deg);
   -webkit-animation-name: anim-show-menu-item-east-right; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   animation-name: anim-show-menu-item-east-right;
@@ -273,7 +277,7 @@ body{
 .show-menu-item-east-left{
   top: 18.75%;
   left: 68.75%;
-  transform: rotate(17deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(17deg) skewX(17deg);
   -webkit-animation-name: anim-show-menu-item-east-left; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   animation-name: anim-show-menu-item-east-left;
@@ -282,7 +286,7 @@ body{
 .show-menu-item-west-right{
   top: 18.75%;
   left: 31.25%;
-  transform: rotate(-17deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-17deg) skewX(-17deg);
   -webkit-animation-name: anim-show-menu-item-west-right; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   animation-name: anim-show-menu-item-west-right;
@@ -291,7 +295,7 @@ body{
 .show-menu-item-west-left{
   top: 18.75%;
   left: 18.75%;
-  transform: rotate(17deg) translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(17deg) skewX(17deg);
   -webkit-animation-name: anim-show-menu-item-west-left; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   animation-name: anim-show-menu-item-west-left;
@@ -344,3 +348,4 @@ body{
 	0% {top: 43.75%;left: 68.75%;}
 	100% {top: 18.75%;left: 68.75%;}
 }
+/*********************END OF MENU*********************/
