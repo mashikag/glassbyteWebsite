@@ -8,36 +8,104 @@
 		if (showMenu && ev == "mouseleave" || !showMenu && ev == "mouseover") {
 			showMenu = !showMenu;
 			
-			var boxCount = 8;
-			var imgSrc = "logo/box-300px.png";
-			if (showMenu) {
-				for ( i = 1; i <= boxCount; i++) {
-					var newEl = document.createElement("img");
-					newEl.src = imgSrc;
-					newEl.className += ' menu-box';
-					newEl.className += ' menu-box' + i;
-					newEl.className += ' show-menu-box' + i;
-					var el = document.getElementsByClassName("menu-box menu-box"+i)[0];
-					console.log(newEl + "\n" + el);
-					el.parentNode.replaceChild(newEl, el);
-				}
-			} else {
-				for ( i = 1; i <= boxCount; i++) {
-					var newEl = document.createElement("img");
-					newEl.src = imgSrc;
-					newEl.className += ' menu-box';
-					newEl.className += ' menu-box' + i;
-					newEl.className += ' hide-menu-box' + i;
-					var el = document.getElementsByClassName("menu-box menu-box"+i)[0];
-			console.log(newEl + "\n" + el);
-					el.parentNode.replaceChild(newEl, el);
-					
-				}
-			}
+      refreshBoxElements();
+      
+      refreshMenuLabelsElements();
 			
 			console.log("restartMenuAnimation");
 		}
 	}
+  
+  /*for animation restart*/
+  function refreshBoxElements(){
+    var boxCount = 8;
+    var imgSrc = "logo/box-300px.png";
+    if (showMenu) {
+      for ( i = 1; i <= boxCount; i++) {
+        var newEl = document.createElement("img");
+        newEl.src = imgSrc;
+        newEl.className += ' menu-box';
+        newEl.className += ' menu-box' + i;
+        newEl.className += ' show-menu-box' + i;
+        var el = document.getElementsByClassName("menu-box menu-box"+i)[0];
+        console.log(newEl + "\n" + el);
+        el.parentNode.replaceChild(newEl, el);
+      }
+    } else {
+      for ( i = 1; i <= boxCount; i++) {
+        var newEl = document.createElement("img");
+        newEl.src = imgSrc;
+        newEl.className += ' menu-box';
+        newEl.className += ' menu-box' + i;
+        newEl.className += ' hide-menu-box' + i;
+        var el = document.getElementsByClassName("menu-box menu-box"+i)[0];
+        console.log(newEl + "\n" + el);
+        el.parentNode.replaceChild(newEl, el);
+        
+      }
+    }
+  }
+  
+  /*for animation restart*/
+  function refreshMenuLabelsElements(){
+    console.log("refreshMenuLabelsElements() Refreshing menu labels elements.");
+    
+    var menuItems = 
+      [
+        "menu-item-middle-right",
+        "menu-item-middle-left",
+        "menu-item-west-right",
+        "menu-item-west-left",
+        "menu-item-east-right",
+        "menu-item-east-left"
+      ];
+      
+    var menuItemLabels = 
+      [
+        "Products",
+        "About",
+        "Contact"
+      ];
+      
+    var labelIndex = 0;
+    
+    if (showMenu) {
+      for (menuItem of menuItems) {
+        /*Create new menu item element that will replace the old one to restart the animation*/
+        var newMenuItemEl = document.createElement("MENUITEM");
+        newMenuItemEl.label = menuItemLabels[Math.floor(labelIndex/2)];
+        newMenuItemEl.className += ' menu-item';
+        newMenuItemEl.className += ' show-' + menuItem;
+        newMenuItemEl.appendChild(document.createTextNode(menuItemLabels[Math.floor(labelIndex/2)]));
+        
+        /*Create new menu item element that will replace the old one to restart the animation*/
+        var curMenuItemEl = document.getElementsByClassName("hide-" + menuItem)[0];
+        curMenuItemEl.parentNode.replaceChild(newMenuItemEl, curMenuItemEl);
+        
+        console.log("refreshMenuLabelsElements() Replaced  " + menuItem + " - label: " + menuItemLabels[Math.floor(labelIndex/2)]);
+        
+        labelIndex++;
+      }
+    }
+    else {
+      for (menuItem of menuItems) {
+        /*Create new menu item element that will replace the old one to restart the animation*/
+        var newMenuItemEl = document.createElement("menuitem");
+        newMenuItemEl.label = menuItemLabels[Math.floor(labelIndex/2)];
+        newMenuItemEl.className += ' menu-item';
+        newMenuItemEl.className += ' hide-' + menuItem;
+        newMenuItemEl.appendChild(document.createTextNode(menuItemLabels[Math.floor(labelIndex/2)]));
+        
+        /*Create new menu item element that will replace the old one to restart the animation*/
+        var curMenuItemEl = document.getElementsByClassName("show-" + menuItem)[0];
+        curMenuItemEl.parentNode.replaceChild(newMenuItemEl, curMenuItemEl);
+        
+        console.log("refreshMenuLabelsElements() Replaced  " + menuItem + " - label: " + menuItemLabels[Math.floor(labelIndex/2)]);
+        
+        labelIndex++;
+      }
+    }
+  }
   </script>
 </head>
 <body>
@@ -52,22 +120,22 @@
 			<img src="logo/box-300px.png" class="menu-box menu-box7">
 			<img src="logo/box-300px.png" class="menu-box menu-box8">
       <menu>
-        <menuitem id="menu-item-middle-left" label="Products" onClick="#products">
+        <menuitem class="menu-item hide-menu-item-middle-left" label="Products" onClick="#products">
           Products
         </menuitem>
-        <menuitem id="menu-item-middle-right" label="Products" onClick="#products">
+        <menuitem class="menu-item hide-menu-item-middle-right" label="Products" onClick="#products">
           Products
         </menuitem>
-        <menuitem id="menu-item-east-left" label="About" onClick="#about">
+        <menuitem class="menu-item hide-menu-item-east-left" label="About" onClick="#about">
           About
         </menuitem>
-        <menuitem id="menu-item-east-right" label="About" onClick="#about">
+        <menuitem class="menu-item hide-menu-item-east-right" label="About" onClick="#about">
           About
         </menuitem>
-        <menuitem id="menu-item-west-left" label="Contact" onClick="#contact">
+        <menuitem class="menu-item hide-menu-item-west-right" label="Contact" onClick="#contact">
           Contact
         </menuitem>
-        <menuitem id="menu-item-west-left" label="Contact" onClick="#contact">
+        <menuitem class="menu-item hide-menu-item-west-left" label="Contact" onClick="#contact">
           Contact
         </menuitem>
       </menu>

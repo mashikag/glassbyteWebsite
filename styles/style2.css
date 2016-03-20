@@ -40,7 +40,7 @@ body{
 .menu-box4{transform: translate(-50%, -83.4%); z-index:3;}
 .menu-box5{transform: translate(-150%, -83.4%); z-index:3;}
 .menu-box6{transform: translate(50%, -83.4%); z-index:3;}
-.menu-box7{transform: translate(-200%, -66.66%); z-index:3;}
+.menu-box7{transform: translate(-200%, -66.66%); z-index:4;}
 .menu-box8{transform: translate(100%, -66.6%); z-index:4;}
 .show-menu-box1{
 	transform: translate(-50%, -50%);
@@ -125,6 +125,7 @@ body{
 	transform: translate(50%, -83.4%); 
     -webkit-animation-name: anim-show-menu-box6; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
     animation-name: anim-show-menu-box6;
     animation-duration: 2s;
     animation-direction: reverse;
@@ -170,38 +171,176 @@ body{
 	0% {transform: translate(50%, -83.4%);}
 	100% {transform: translate(50%, -117%);}
 }
-menu-item{
+.menu-item{
   position: absolute;
-  transform: translate(50%, 50%);
-  z-index: 4;
+  transform-origin: 50% 50%;
+  z-index: 3;
+  font-size: 30px;
 }
-#menu-item-middle-right{
-  position: absolute;
+.hide-menu-item-middle-right{
   top: 43.75%;
   left: 56.25%;
+  transform: rotate(-17deg) translate(-50%, -50%);
+  -webkit-animation-name: anim-show-menu-item-middle-right; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
+  animation-name: anim-show-menu-item-middle-right;
+  animation-duration: 2s;
+  animation-direction: reverse;
 }
-#menu-item-middle-left{
-  position: absolute;
+.hide-menu-item-middle-left{
   top: 43.75%;
   left: 43.75%;
+  transform: rotate(17deg) translate(-50%, -50%);
+  -webkit-animation-name: anim-show-menu-item-middle-left; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
+  animation-name: anim-show-menu-item-middle-left;
+  animation-duration: 2s;
+  animation-direction: reverse;
 }
-#menu-item-east-right{
-  position: absolute;
+.hide-menu-item-east-right{
   top: 43.75%;
-  left: 56.25%;
+  left: 81.25%;
+  transform: rotate(-17deg) translate(-50%, -50%);
+  -webkit-animation-name: anim-show-menu-item-east-right; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
+  animation-name: anim-show-menu-item-east-right;
+  animation-duration: 2s;
+  animation-direction: reverse;
 }
-#menu-item-east-right{
-  position: absolute;
+.hide-menu-item-east-left{
   top: 43.75%;
-  left: 56.25%;
+  left: 68.75%;
+  transform: rotate(17deg) translate(-50%, -50%);
+  -webkit-animation-name: anim-show-menu-item-east-left; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
+  animation-name: anim-show-menu-item-east-left;
+  animation-duration: 2s;
+  animation-direction: reverse;
 }
-#menu-item-west-right{
-  position: absolute;
+.hide-menu-item-west-right{
   top: 43.75%;
-  left: 56.25%;
+  left: 31.25%;
+  transform: rotate(-17deg) translate(-50%, -50%);
+  -webkit-animation-name: anim-show-menu-item-west-right; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
+  animation-name: anim-show-menu-item-west-right;
+  animation-duration: 2s;
+  animation-direction: reverse;
 }
-#menu-item-west-right{
-  position: absolute;
+.hide-menu-item-west-left{
   top: 43.75%;
+  left: 18.75%;
+  transform: rotate(17deg) translate(-50%, -50%);
+  -webkit-animation-name: anim-show-menu-item-west-left; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
+  animation-name: anim-show-menu-item-west-left;
+  animation-duration: 2s;
+  animation-direction: reverse;
+}
+.show-menu-item-middle-right{
+  top: -6.25%;
   left: 56.25%;
+  transform: rotate(-17deg) translate(-50%, -50%);
+  -webkit-animation-name: anim-show-menu-item-middle-right; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  animation-name: anim-show-menu-item-middle-right;
+  animation-duration: 2s;
+}
+.show-menu-item-middle-left{
+  top: -6.25%;
+  left: 43.75%;
+  transform: rotate(17deg) translate(-50%, -50%);
+  -webkit-animation-name: anim-show-menu-item-middle-left; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  animation-name: anim-show-menu-item-middle-left;
+  animation-duration: 2s;
+}
+.show-menu-item-east-right{
+  top: 18.75%;
+  left: 81.25%;
+  transform: rotate(-17deg) translate(-50%, -50%);
+  -webkit-animation-name: anim-show-menu-item-east-right; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  animation-name: anim-show-menu-item-east-right;
+  animation-duration: 2s;
+}
+.show-menu-item-east-left{
+  top: 18.75%;
+  left: 68.75%;
+  transform: rotate(17deg) translate(-50%, -50%);
+  -webkit-animation-name: anim-show-menu-item-east-left; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  animation-name: anim-show-menu-item-east-left;
+  animation-duration: 2s;
+}
+.show-menu-item-west-right{
+  top: 18.75%;
+  left: 31.25%;
+  transform: rotate(-17deg) translate(-50%, -50%);
+  -webkit-animation-name: anim-show-menu-item-west-right; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  animation-name: anim-show-menu-item-west-right;
+  animation-duration: 2s;
+}
+.show-menu-item-west-left{
+  top: 18.75%;
+  left: 18.75%;
+  transform: rotate(17deg) translate(-50%, -50%);
+  -webkit-animation-name: anim-show-menu-item-west-left; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  animation-name: anim-show-menu-item-west-left;
+  animation-duration: 2s;
+}
+@-webkit-keyframes anim-show-menu-item-middle-right{
+	0% {top: 43.75%;left: 56.25%;}
+	100% {top: -6.25%;left: 56.25%;}
+}
+@keyframes anim-show-menu-item-middle-right{
+	0% {top: 43.75%;left: 56.25%;}
+	100% {top: -6.25%;left: 56.25%;}
+}
+@-webkit-keyframes anim-show-menu-item-middle-left{
+	0% {top: 43.75%;left: 43.75%;}
+	100% {top: -6.25%;left: 43.75%;}
+}
+@keyframes anim-show-menu-item-middle-left{
+	0% {top: 43.75%;left: 43.75%;}
+	100% {top: -6.25%;left: 43.75%;}
+}
+@-webkit-keyframes anim-show-menu-item-west-right{
+	0% {top: 43.75%;left: 31.25%;}
+	100% {top: 18.75%;left: 31.25%;}
+}
+@keyframes anim-show-menu-item-west-right{
+	0% {top: 43.75%;left: 31.25%;}
+	100% {top: 18.75%;left: 31.25%;}
+}
+@-webkit-keyframes anim-show-menu-item-west-left{
+	0% {top: 43.75%;left: 18.75%;}
+	100% {top: 18.75%;left: 18.75%;}
+}
+@keyframes anim-show-menu-item-west-left{
+	0% {top: 43.75%;left: 18.75%;}
+	100% {top: 18.75%;left: 18.75%;}
+}
+@-webkit-keyframes anim-show-menu-item-east-right{
+	0% {top: 43.75%;left: 81.25%;}
+	100% {top: 18.75%;left: 81.25%;}
+}
+@keyframes anim-show-menu-item-east-right{
+	0% {top: 43.75%;left: 81.25%;}
+	100% {top: 18.75%;left: 81.25%;}
+}
+@-webkit-keyframes anim-show-menu-item-east-left{
+	0% {top: 43.75%;left: 68.75%;}
+	100% {top: 18.75%;left: 68.75%;}
+}@keyframes anim-show-menu-item-east-left{
+	0% {top: 43.75%;left: 68.75%;}
+	100% {top: 18.75%;left: 68.75%;}
 }
