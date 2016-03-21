@@ -1,9 +1,16 @@
-<html ng-app>
+<!DOCTYPE html>
 <head>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script>
-  
+	var DEF_BOX_WIDTH = 300;
+	var DEF_BOX_HEIGHT = DEF_BOX_WIDTH;
+	var LOGO_MENU_MARGIN_PERCENTS = 0.10; 
+	var MAX_LOGO_MENU_WRAPPER_WIDTH = Math.floor(4 * DEF_BOX_WIDTH);
+	var MAX_LOGO_MENU_WRAPPER_HEIGHT = Math.floor(DEF_BOX_HEIGHT + DEF_BOX_HEIGHT/3);
+	var currentLogoMenuWrapperWidth = MAX_LOGO_MENU_WRAPPER_WIDTH;
+	var currentLogoMenuWrapperHeight = MAX_LOGO_MENU_WRAPPER_HEIGHT;
+	
 	var showMenu = false;
 	function restartMenuAnimation(ev){
 		if (showMenu && ev == "mouseleave" || !showMenu && ev == "mouseover") {
@@ -129,16 +136,35 @@
       -based on these set the size of box images and the font
     */
     console.log("adjustLogoMenuSize() Function entered.");
+	console.log("currentLogoMenuWrapperHeight: "+currentLogoMenuWrapperHeight);
+	console.log("currentLogoMenuWrapperWidth: "+currentLogoMenuWrapperWidth);
     
-    var windowHeight = $(window).height();
     var windowWidth = $(window).width();
     
-    console.log("Window height: " + windowHeight);
     console.log("Window width: " + windowWidth);
+	
+	var currentPaddingPx = getTotalPaddingPx(currentLogoMenuWrapperWidth, LOGO_MENU_MARGIN_PERCENTS);
+	if (
+		((currentLogoMenuWrapperWidth + currentPaddingPx) > windowWidth) || 
+		(((currentLogoMenuWrapperWidth + currentPaddingPx)<windowWidth) && (currentLogoMenuWrapperWidth < MAX_LOGO_MENU_WRAPPER_WIDTH))
+		)
+	{
+		console.log("menulogo needs resizing.");
+		var newSideMarginsPx = getTotalPaddingPx(windowWidth, LOGO_MENU_MARGIN_PERCENTS);
+		var newLogoMenuWrapperWidth = windowWidth - newSideMarginsPx;
+		var newBoxWidth = Math.floor(newLogoMenuWrapperWidth/4);
+		var newBoxHeight = newBoxWidth;
+		var newLogoMenuWrapperHeight = Math.floor(newBoxHeight + newBoxHeight/3);
+		currentLogoMenuWrapperWidth = newLogoMenuWrapperWidth;
+		currentLogoMenuWrapperHeight = newLogoMenuWrapperHeight;
+	}
   }
   
-  $(window).load(adjustLogoMenuSize());
-  $(window).resize(adjustLogoMenuSize());
+  
+  function getTotalPaddingPx(size, paddingPercent){return Math.floor(size*paddingPercent);}
+  
+  $(window).load(adjustLogoMenuSize);
+  $(window).resize(adjustLogoMenuSize);
   
   </script>
 </head>
