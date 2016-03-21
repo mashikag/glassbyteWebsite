@@ -1,8 +1,9 @@
 <html ng-app>
 <head>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script>
+  
 	var showMenu = false;
 	function restartMenuAnimation(ev){
 		if (showMenu && ev == "mouseleave" || !showMenu && ev == "mouseover") {
@@ -70,45 +71,67 @@
     var labelIndex = 0;
     
     if (showMenu) {
-      for (menuItem of menuItems) {
-        /*Create new menu item element that will replace the old one to restart the animation*/
-        var newMenuItemEl = document.createElement("MENUITEM");
-        newMenuItemEl.label = menuItemLabels[Math.floor(labelIndex/2)];
-        newMenuItemEl.className += ' menu-item';
-        newMenuItemEl.className += ' show-' + menuItem;
-        newMenuItemEl.className += ' slide-up';
-        newMenuItemEl.appendChild(document.createTextNode(menuItemLabels[Math.floor(labelIndex/2)]));
-        
-        /*Create new menu item element that will replace the old one to restart the animation*/
-        var curMenuItemEl = document.getElementsByClassName("hide-" + menuItem)[0];
-        curMenuItemEl.parentNode.replaceChild(newMenuItemEl, curMenuItemEl);
-        
-        console.log("refreshMenuLabelsElements() Replaced  " + menuItem + " - label: " + menuItemLabels[Math.floor(labelIndex/2)]);
-        
-        labelIndex++;
+      for (menuItem of menuItems) { 
+        (function () {
+          /*Create new menu item element that will replace the old one to restart the animation*/
+          var newMenuItemEl = document.createElement("MENUITEM");
+          var currentLabel = menuItemLabels[Math.floor(labelIndex/2)];
+          newMenuItemEl.label = currentLabel;
+          newMenuItemEl.className += ' menu-item';
+          newMenuItemEl.className += ' show-' + menuItem;
+          newMenuItemEl.className += ' slide-up';
+          newMenuItemEl.addEventListener(
+            'click',
+            function(){
+              $('html, body').animate(
+                { scrollTop: $("#" + currentLabel.toLowerCase()).offset().top }, 
+                2000
+              );
+            }
+          );
+          newMenuItemEl.appendChild(document.createTextNode(currentLabel));
+          
+          /*Create new menu item element that will replace the old one to restart the animation*/
+          var curMenuItemEl = document.getElementsByClassName("hide-" + menuItem)[0];
+          curMenuItemEl.parentNode.replaceChild(newMenuItemEl, curMenuItemEl);
+          
+          console.log("refreshMenuLabelsElements() Replaced  " + menuItem + " - label: " + currentLabel);
+          
+          labelIndex++;
+        })();
       }
     }
     else {
       for (menuItem of menuItems) {
         /*Create new menu item element that will replace the old one to restart the animation*/
         var newMenuItemEl = document.createElement("menuitem");
-        newMenuItemEl.label = menuItemLabels[Math.floor(labelIndex/2)];
+        var currentLabel = menuItemLabels[Math.floor(labelIndex/2)];
+        newMenuItemEl.label = currentLabel;
         newMenuItemEl.className += ' menu-item';
         newMenuItemEl.className += ' hide-' + menuItem;
         newMenuItemEl.className += ' slide-down';
-        newMenuItemEl.appendChild(document.createTextNode(menuItemLabels[Math.floor(labelIndex/2)]));
+        newMenuItemEl.appendChild(document.createTextNode(currentLabel));
         
         /*Create new menu item element that will replace the old one to restart the animation*/
         var curMenuItemEl = document.getElementsByClassName("show-" + menuItem)[0];
         curMenuItemEl.parentNode.replaceChild(newMenuItemEl, curMenuItemEl);
         
-        console.log("refreshMenuLabelsElements() Replaced  " + menuItem + " - label: " + menuItemLabels[Math.floor(labelIndex/2)]);
+        console.log("refreshMenuLabelsElements() Replaced  " + menuItem + " - label: " + currentLabel);
         
         labelIndex++;
       }
     }
   }
+
+  function adjustLogoMenuSize(){
+    /*
+      -check window.innerheight and .innerwidth
+      -based on these 
+    */
+  }
   
+  $(window).load(adjustLogoMenuSize());
+  $(window).resize(adjustLogoMenuSize());
   
   </script>
 </head>
