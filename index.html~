@@ -92,7 +92,7 @@
           newMenuItemEl.className += ' menu-item';
           newMenuItemEl.className += ' show-' + menuItem;
           newMenuItemEl.className += ' slide-up';
-          $(newMenuItemEl).css("font-size",String(currentFontSize)+"px");
+        $(newMenuItemEl).css("font-size",String(currentFontSize)+"px");
           newMenuItemEl.addEventListener(
             'click',
             function(){
