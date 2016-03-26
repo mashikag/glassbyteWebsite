@@ -395,13 +395,13 @@ body{
     background-color: red;
 }
 .metro-tile2{
-    height: 48%;
+    height: 45%;
     width: 100%;
     background-color: orange;
 }
 .metro-tile3{
     top:4%;
-    height: 48%;
+    height: 45%;
     width: 100%;
     background-color: yellow;
 }

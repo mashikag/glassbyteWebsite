@@ -230,8 +230,8 @@
 	</div>
   <div id="products" class="main-region">
     <div class="metro-line">
-        <div class="metro-tile metro-tile1 metro-vertical-tiles-wrapper"></div>
-        <div class="metro-two-horizontal-tiles-wrapper metro-vertical-tiles-wrapper">
+        <div class="metro-tile metro-tile1"></div>
+        <div class="metro-two-horizontal-tiles-wrapper">
             <div class="metro-tile metro-tile2"></div>
             <div class="metro-tile metro-tile3"></div>
         </div>
