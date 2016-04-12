@@ -364,15 +364,42 @@ body{
 
 
 /*********************PRODUCTS*********************/
+#products{
+	background: green;
+	pading: 0;
+	margin: 0;
+}
 @media only screen and (max-width : 767px) {
-	
+	.metro-line{
+		padding: 10px 0px;
+		margin: 0 auto;
+		width: 360px;
+	}
+	.metro-vertical-tiles-wrapper{
+		position: relative;
+	}
+	.metro-two-horizontal-tiles-wrapper{
+	}
+	.metro-tile{
+		position:relative;
+		margin: 10px 10px;
+		height: 360px;
+		width: 360px;
+	}
+	.metro-tile1{
+        vertical-align: top;
+		background-color: red;
+	}
+	.metro-tile2{
+		width: 100%;
+		background-color: orange;
+	}
+	.metro-tile3{
+		width: 100%;
+		background-color: yellow;
+	}
 }
 @media only screen and (min-width : 768px) {
-	#products{
-		background: green;
-		pading: 0;
-		margin: 0;
-	}
 	.metro-line{
 		padding: 20px 0px;
 		margin: 0 auto;
@@ -393,6 +420,7 @@ body{
 		width: 360px;
 	}
 	.metro-tile1{
+        vertical-align: top;
 		background-color: red;
 	}
 	.metro-tile2{
@@ -406,11 +434,6 @@ body{
 	}
 }
 @media only screen and (min-width : 1000px) {
-	#products{
-		background: green;
-		pading: 0;
-		margin: 0;
-	}
 	.metro-line{
 		padding: 20px 0px;
 		height: 600px;
