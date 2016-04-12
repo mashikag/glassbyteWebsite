@@ -364,46 +364,87 @@ body{
 
 
 /*********************PRODUCTS*********************/
-#products{
-    max-height:800px;
-    background: green;
-    pading: 0;
-    margin: 0;
+@media only screen and (max-width : 767px) {
+	
 }
-.metro-line{
-    height: 600px;
-    padding: 0 1%;
-    margin: 0 auto;
-    max-width: 1000px;
+@media only screen and (min-width : 768px) {
+	#products{
+		background: green;
+		pading: 0;
+		margin: 0;
+	}
+	.metro-line{
+		padding: 20px 0px;
+		margin: 0 auto;
+		max-width: 768px;
+	}
+	.metro-vertical-tiles-wrapper{
+		display: inline-block;
+		position: relative;
+		width: 360px;
+	}
+	.metro-two-horizontal-tiles-wrapper{
+		width: 360px;
+	}
+	.metro-tile{
+		position:relative;
+		margin: 0 10px;
+		height: 360px;
+		width: 360px;
+	}
+	.metro-tile1{
+		background-color: red;
+	}
+	.metro-tile2{
+		width: 100%;
+		background-color: orange;
+	}
+	.metro-tile3{
+		margin-top: 20px;
+		width: 100%;
+		background-color: yellow;
+	}
 }
-.metro-vertical-tiles-wrapper{
-    display: inline-block;
-    position: relative;
-    top: 4%;
-    height: 92%;
-}
-.metro-two-horizontal-tiles-wrapper{
-    width: 62.66%;
-}
-.metro-tile{
-    position:relative;
-    margin: 0 1%;
-}
-.metro-tile1{
-    height: 92%;
-    width: 31.33%;
-    background-color: red;
-}
-.metro-tile2{
-    height: 48%;
-    width: 100%;
-    background-color: orange;
-}
-.metro-tile3{
-    top:4%;
-    height: 48%;
-    width: 100%;
-    background-color: yellow;
+@media only screen and (min-width : 1000px) {
+	#products{
+		background: green;
+		pading: 0;
+		margin: 0;
+	}
+	.metro-line{
+		padding: 20px 0px;
+		height: 600px;
+		margin: 0 auto;
+		max-width: 1000px;
+	}
+	.metro-vertical-tiles-wrapper{
+		display: inline-block;
+		position: relative;
+		width: 333px;
+		
+	}
+	.metro-two-horizontal-tiles-wrapper{
+		width: 600px;
+	}
+	.metro-tile{
+		position:relative;
+		margin: 0 10px;
+	}
+	.metro-tile1{
+		height: 100%;
+		background-color: red;
+	}
+	.metro-tile2{
+		height: 290px;
+		width: 100%;
+		background-color: orange;
+	}
+	.metro-tile3{
+		margin-top: 20px;
+		height: 290px;
+		width: 100%;
+		background-color: yellow;
+	}
 }
 /*********************END OF PRODUCTS*********************/
 
