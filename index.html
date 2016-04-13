@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script>
 	var DEF_BOX_WIDTH = 300;
@@ -238,9 +240,51 @@
     </div>
   </div>
   <div id="about" class="main-region">
-  
+	<div id="about-content-wrapper">
+		<div id="about-selections-wrapper">
+			<div id="about-selection-item1" class="about-selection-item"></div><div id="about-selection-item2" class="about-selection-item"></div><div id="about-selection-item3" class="about-selection-item"></div><div id="about-selection-item4" class="about-selection-item"></div>
+		</div><div id="about-description-wrapper">
+			<h1 id="about-description-title"></h1><p id="about-description"></p> 
+		</div>
+	</div>
   </div>
   <div id="contact" class="main-region">
+<form class="form-horizontal" role="form" method="post" action="index.php">
+	<div class="form-group">
+		<label for="name" class="col-sm-2 control-label">Name</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="email" class="col-sm-2 control-label">Email</label>
+		<div class="col-sm-10">
+			<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="message" class="col-sm-2 control-label">Message</label>
+		<div class="col-sm-10">
+			<textarea class="form-control" rows="4" name="message"></textarea>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-10 col-sm-offset-2">
+			<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-10 col-sm-offset-2">
+			<! Will be used to display an alert to the user>
+		</div>
+	</div>
+</form>
   </div>
   <footer>
   </footer>
