@@ -366,7 +366,7 @@ body{
 
 /*********************PRODUCTS*********************/
 #products{
-	background: green;
+	background: lightgray;
 	pading: 0;
 	margin: 0;
 }
@@ -453,21 +453,35 @@ body{
 	.metro-tile{
 		position:relative;
 		margin: 0 10px;
+		box-shadow: 5px 5px 5px #888888;
+		cursor: pointer;
 	}
 	.metro-tile1{
 		height: 100%;
-		background-color: red;
+		background-image: url('../imgs/neurobranch-logo-new.png'), linear-gradient(#FCFBE3, #D9987C);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50%;
+		background-color: #D9987C;
 	}
 	.metro-tile2{
-		height: 290px;
+		height: 270px;
 		width: 100%;
-		background-color: orange;
+		background-image: url('../imgs/drinktracker-logo-new.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50%;
+		background-color: #FF9700;
 	}
 	.metro-tile3{
 		margin-top: 20px;
-		height: 290px;
+		height: 270px;
 		width: 100%;
-		background-color: yellow;
+		background-image: url('../imgs/iompar-logo-new.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50%;
+		background-color: #58CC5D;
 	}
 }
 /*********************END OF PRODUCTS*********************/
