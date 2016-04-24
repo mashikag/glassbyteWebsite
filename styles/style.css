@@ -366,7 +366,7 @@ body{
 
 /*********************PRODUCTS*********************/
 #products{
-	background: lightgray;
+	background: white;
 	pading: 0;
 	margin: 0;
 }
@@ -487,158 +487,111 @@ body{
 /*********************END OF PRODUCTS*********************/
 
 /*********************ABOUT*********************/
-@media only screen and (max-width : 767px) {
 	#about{
 		background: blue;
-		padding: 20px 0;
+    height: 100vh;
 	}
-	#about-content-wrapper{
-		margin: 0 auto;
-		width: 360px;
-		max-width: 767px;
-	}
-	#about-selections-wrapper {
-		background: gray;
-		display: inline-block;
-		width: 100%;
-		height: calc(360px / 4);
-		margin: 0;
-		padding: 0;
-	}
-	.about-selection-item{
-		display:inline-block;
-		height: calc(360px / 4);
-		width: calc(360px / 4);
-		cursor: pointer;
-	}
-	#about-selection-item1{
-		background: red;
-	}
-	#about-selection-item2{
-		background: orange;
-	}
-	#about-selection-item3{
-		background: yellow;
-	}
-	#about-selection-item4{
-		background: purple;
-	}
-	#about-description-wrapper {
-		background: green;
-		display: inline-block;
-		width: 100%;
-		min-height: 300px;
-		margin: 0;
-		padding: 0;
-	}
-	#about-description-title{
-		margin: 0;
-		background: darkgreen;
-		width: 100%;
-		height: calc(360px / 4);
-	}
-	#about-description{
-	}
-}
-@media only screen and (min-width : 768px) and (max-width : 999px) {
-	#about{
-		background: blue;
-		padding: 20px 0;
-	}
-	#about-content-wrapper{
-		margin: 0 auto;
-		max-width: 768px;
-		height: 600px;
-	}
-	#about-selections-wrapper {
-		background: gray;
-		width: 100%;
-		height: 150px;
-		margin: 0;
-		padding: 0;
-	}
-	.about-selection-item{
-		display: inline-block;
-		height: 100%;
-		width: calc(768px / 4);
-		cursor: pointer;
-	}
-	#about-selection-item1{
-		background: red;
-	}
-	#about-selection-item2{
-		background: orange;
-	}
-	#about-selection-item3{
-		background: yellow;
-	}
-	#about-selection-item4{
-		background: purple;
-	}
-	#about-description-wrapper {
-		background: green;
-		width: 100%;
-		height: 450px;
-		margin: 0;
-		padding: 0;
-	}
-	#about-description-title{
-		margin: 0;
-		background: darkgreen;
-		width: 100%;
-		height: 150px;
-	}
-}
-@media only screen and (min-width : 1000px) {
-	#about{
-		background: blue;
-		padding: 20px 0;
-	}
+  .bg-stretch{    
+    background-image: url("imgs/dublin2-large.jpg");    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+   #about-header-wrapper{
+    height: 200px;
+    border-top-style: solid;
+    border-top-color: gray;
+    broder-top-width: 10px;
+    font-size: 0px;
+  }
+  #about-header-top-strip{
+    width: 100%;
+    height: 20px;
+    background-color: lightgray;
+  }
+  #about-header-selection{
+    display: table;
+    margin: 0 auto;
+  }
+  #about-header-selection-content{
+    display: inline-block;
+    background-color: lightgray;    
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: 0 20px 10px;
+  }
+  #about-header-selection-left-side{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    height: 0;
+    width: 50px;
+    border-top: 120px solid lightgray;
+    border-left: 50px solid transparent;
+  }
+  #about-header-selection-left-side:after{
+    content:' ';
+    display:block;
+    position:absolute;
+    width:58px;
+    height:35px;
+    left:-8px;
+    top: -25px;
+    background: lightgray;
+    border-radius: 0 0 0 40px;
+  }
+  #about-header-selection-right-side{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    height: 0;
+    width: 50px;
+    border-top: 120px solid lightgray;
+    border-right: 50px solid transparent;
+  }
+  #about-header-selection-right-side:after{
+    content:' ';
+    display:block;
+    position:absolute;
+    width:58px;
+    height:35px;
+    top: -25px;
+    left:-50px;
+    background: lightgray;
+    border-radius: 0 0 40px 0;
+  }
+  
+  .about-selection-item:first-child{
+    margin: 0 10px 0 0;
+  }
+  .about-selection-item:last-child{
+    margin: 0 0 0 10px;
+  }
+  .about-selection-item{
+    display: inline-block;
+    width: 64px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 0 10px 0 10px;
+    padding: 0;
+    cursor: pointer;
+  }
+  
 	#about-content-wrapper{
 		margin: 0 auto;
 		max-width: 1000px;
 		height: 600px;
 	}
-	#about-selections-wrapper {
-		background: gray;
-		display: inline-block;
-		width: 250px;
-		height: 100%;
-		margin: 0;
-		padding: 0;
-	}
-	.about-selection-item{
-		height: calc(600px / 4);
-		width: 100%;
-		cursor: pointer;
-	}
-	#about-selection-item1{
-		background: red;
-	}
-	#about-selection-item2{
-		background: orange;
-	}
-	#about-selection-item3{
-		background: yellow;
-	}
-	#about-selection-item4{
-		background: purple;
-	}
-	#about-description-wrapper {
-		background: green;
-		display: inline-block;
-		width: 750px;
-		height: 100%;
-		margin: 0;
-		padding: 0;
-	}
-	#about-description-title{
-		margin: 0;
-		background: darkgreen;
-		width: 100%;
-		height: calc(600px / 4);
-	}
-}
 /*********************END OF ABOUT*********************/
 
 /*********************CONTACT*********************/
