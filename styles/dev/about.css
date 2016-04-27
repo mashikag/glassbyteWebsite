@@ -3,7 +3,7 @@
     position: relative;
 		background: blue;
     height: 100vh;
-    background-image: url("../imgs/dublin2-large.jpg");
+    background-image: url("../../imgs/dublin2-large.jpg");
     top: 0;
     left: 0;
     right: 0;
@@ -83,4 +83,6 @@
   #about-description{
     
   }
-/*********************END OF ABOUT*********************/
+  
+  
+/*********************Animations*********************/

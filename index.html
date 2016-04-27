@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html ng-app="">
+<html ng-app="websiteApp">
 <head>
   <!--The below stylesheets only should be used during dev stage, merge into one and minify when deploying.-->
-  <link rel="stylesheet" type="text/css" href="styles/dev/commmon.css">
+  <link rel="stylesheet" type="text/css" href="styles/dev/common.css">
   <link rel="stylesheet" type="text/css" href="styles/dev/intro.css">
   <link rel="stylesheet" type="text/css" href="styles/dev/products.css">
   <link rel="stylesheet" type="text/css" href="styles/dev/about.css">
   <link rel="stylesheet" type="text/css" href="styles/dev/contact.css">
   <link rel="stylesheet" type="text/css" href="styles/dev/footer.css">
+  
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <script src="scripts/animated-logo-menu.js"></script>
+  
+  <!--The below stylesheets only should be used during dev stage, merge into one and minify when deploying.-->
+  <script src="scripts/dev/common.js"></script>
+  <script src="scripts/dev/intro.js"></script>
+  <script src="scripts/dev/products.js"></script>
+  <script src="scripts/dev/about.js"></script>
+  <script src="scripts/dev/contact.js"></script>
 </head>
 <body>
 	<ng-include src="'intro.html'"></ng-include>
