@@ -1,12 +1,4 @@
-body{
-	margin: 0;
-	padding: 0;
-}
-.main-region{
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
+
 #intro{
 	height: 100vh;
   background: blue; /* For browsers that do not support gradients */
@@ -177,6 +169,7 @@ body{
   transform-origin: 50% 50%;
   z-index: 3;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .hide-menu-item-middle-right{
@@ -361,135 +354,3 @@ body{
 	100% {top: 18.75%;left: 68.75%;}
 }
 /*********************END OF MENU*********************/
-
-
-/*********************PRODUCTS*********************/
-#products{
-	background: green;
-	pading: 0;
-	margin: 0;
-}
-@media only screen and (max-width : 767px) {
-	.metro-line{
-		padding: 10px 0px;
-		margin: 0 auto;
-		width: 360px;
-	}
-	.metro-vertical-tiles-wrapper{
-		position: relative;
-	}
-	.metro-two-horizontal-tiles-wrapper{
-	}
-	.metro-tile{
-		position:relative;
-		margin: 10px 10px;
-		height: 360px;
-		width: 360px;
-	}
-	.metro-tile1{
-        vertical-align: top;
-		background-color: red;
-	}
-	.metro-tile2{
-		width: 100%;
-		background-color: orange;
-	}
-	.metro-tile3{
-		margin-top: 20px;
-		width: 100%;
-		background-color: yellow;
-	}
-}
-@media only screen and (min-width : 768px) {
-	.metro-line{
-		padding: 20px 0px;
-		margin: 0 auto;
-		max-width: 768px;
-	}
-	.metro-vertical-tiles-wrapper{
-		display: inline-block;
-		position: relative;
-		width: 360px;
-	}
-	.metro-two-horizontal-tiles-wrapper{
-		width: 360px;
-	}
-	.metro-tile{
-		position:relative;
-		margin: 0 10px;
-		height: 360px;
-		width: 360px;
-	}
-	.metro-tile1{
-        vertical-align: top;
-		background-color: red;
-	}
-	.metro-tile2{
-		width: 100%;
-		background-color: orange;
-	}
-	.metro-tile3{
-		margin-top: 20px;
-		width: 100%;
-		background-color: yellow;
-	}
-}
-@media only screen and (min-width : 1000px) {
-	.metro-line{
-		padding: 20px 0px;
-		height: 600px;
-		margin: 0 auto;
-		max-width: 1000px;
-	}
-	.metro-vertical-tiles-wrapper{
-		display: inline-block;
-		position: relative;
-		width: 333px;
-		
-	}
-	.metro-two-horizontal-tiles-wrapper{
-		width: 600px;
-	}
-	.metro-tile{
-		position:relative;
-		margin: 0 10px;
-	}
-	.metro-tile1{
-		height: 100%;
-		background-color: red;
-	}
-	.metro-tile2{
-		height: 290px;
-		width: 100%;
-		background-color: orange;
-	}
-	.metro-tile3{
-		margin-top: 20px;
-		height: 290px;
-		width: 100%;
-		background-color: yellow;
-	}
-}
-/*********************END OF PRODUCTS*********************/
-
-/*********************ABOUT*********************/
-#about{
-	height: 100vh;
-    background: blue;
-}
-/*********************END OF ABOUT*********************/
-
-/*********************CONTACT*********************/
-#contact{
-	height: 100vh;
-    background: orange;
-}
-/*********************END OF CONTACT*********************/
-
-/*********************FOOTER*********************/
-footer{
-    background: purple;
-    height: 33vh;
-    width: 100%;
-}
-/*********************END OF FOOTER*********************/
